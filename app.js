@@ -19,8 +19,8 @@ app.get("/", function(req, res){
   res.render("index", {ip:ip});
 })
 
-app.post('/ip', function(req, res){
-  ip = req.body.ip;
+app.get('/:ip', function(req, res){
+  ip = req.params.ip;
   res.send('success!');
 })
 
